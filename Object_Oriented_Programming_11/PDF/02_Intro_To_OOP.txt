@@ -1,0 +1,20 @@
+Principles of the OOP:
+    * Absraction:
+        Hiding the internal implemenation and showing only required features.
+        Ex: Car, Tv
+
+    * Encapsulation
+        Wrapping up the data and function of the object into the single unit to protect it from the external modification
+        EX: Bank Account, Blockchain
+
+    * Inheritence (Spcilization)
+        Inheritance means creating new classes based on existing ones. A class that inherits from another class can reuse the methods and fields of that class. In addition, you can add new fields and methods to your current class as well.  
+        Ex: 
+            Iphone 15 is the inherits from iphone 14, it has also the features of 14 and some extra features in it.
+
+    * Polymorhpism ( Generalization)
+        Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance
+        Ex: 
+            Tv could be of Sumsung, lG
+            Phone could be of sumsung, iphone,vivo
+            Car Could be of Toyta, Suzuki etc
