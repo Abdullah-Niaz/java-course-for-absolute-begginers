@@ -1,7 +1,5 @@
 package Object_Oriented_Programming_11.Method_Overriding;
 
-import Static.static_Method;
-
 class sup_{
     public void display(){
         System.out.println("Hello World");
