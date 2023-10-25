@@ -1,4 +1,4 @@
-package Abdul_Bari_Java.Object_Oriented_Programming_11.writingClass;
+package Object_Oriented_Programming_11.writingClass;
 
 class rectang{
     private double length;
