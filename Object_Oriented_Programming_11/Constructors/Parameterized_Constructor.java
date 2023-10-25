@@ -1,4 +1,4 @@
-package Abdul_Bari_Java.Object_Oriented_Programming_11.Constructors;
+package Object_Oriented_Programming_11.Constructors;
 
 class Parent{
     public Parent(){
