@@ -1,4 +1,4 @@
-package Object_Oriented_Programming_11.Method_Overriding;
+package inheritence_12.Method_Overriding;
 
 class sup_{
     public void display(){
