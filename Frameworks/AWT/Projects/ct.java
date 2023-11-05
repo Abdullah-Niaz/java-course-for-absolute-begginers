@@ -1,3 +1,4 @@
+package Frameworks.AWT.Projects;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -24,7 +25,7 @@ class myownFrame extends Frame implements ActionListener{
     }
 }
 
-public class counter {
+public class ct {
     public static void main(String[] args) {
         myownFrame fb = new myownFrame();
         fb.setSize(300,400);
