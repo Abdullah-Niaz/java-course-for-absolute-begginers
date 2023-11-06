@@ -4,6 +4,8 @@ import java.awt.Frame;
 import java.awt.Label;
 import java.awt.TextField;
 import java.awt.Panel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 class MyFrame extends Frame {
     Label l1, l2;
@@ -21,7 +23,7 @@ class MyFrame extends Frame {
         val1.add(l1);
         val1.add(tf1);
         add(val1);
-        
+
         l2 = new Label("Value2: ");
         tf2 = new TextField(20);
         Panel val2 = new Panel();
@@ -39,7 +41,7 @@ class MyFrame extends Frame {
         buttons.add(mult);
         buttons.add(divi);
         add(buttons);
-        
+
         Panel resultPanel = new Panel(); // Create a panel for the "Result" label and text field
         l3 = new Label("Result: ");
         tf3 = new TextField(20);
@@ -47,6 +49,46 @@ class MyFrame extends Frame {
         resultPanel.add(tf3); // Add the text field to the panel
         add(resultPanel); // Add the panel to the frame
 
+        // Add action listeners to the buttons
+        ad.addActionListener(new ButtonClickListener("+"));
+        sub.addActionListener(new ButtonClickListener("-"));
+        mult.addActionListener(new ButtonClickListener("*"));
+        divi.addActionListener(new ButtonClickListener("/"));
+    }
+
+    private class ButtonClickListener implements ActionListener {
+        private String operation;
+
+        public ButtonClickListener(String operation) {
+            this.operation = operation;
+        }
+
+        public void actionPerformed(ActionEvent e) {
+            try {
+                double value1 = Double.parseDouble(tf1.getText());
+                double value2 = Double.parseDouble(tf2.getText());
+                double result = 0.0;
+
+                if (operation.equals("+")) {
+                    result = value1 + value2;
+                } else if (operation.equals("-")) {
+                    result = value1 - value2;
+                } else if (operation.equals("*")) {
+                    result = value1 * value2;
+                } else if (operation.equals("/")) {
+                    if (value2 != 0) {
+                        result = value1 / value2;
+                    } else {
+                        tf3.setText("Error: Division by zero");
+                        return;
+                    }
+                }
+
+                tf3.setText(String.valueOf(result));
+            } catch (NumberFormatException ex) {
+                tf3.setText("Error: Invalid input");
+            }
+        }
     }
 }
 
@@ -56,5 +98,4 @@ public class calculator {
         f.setSize(330, 300);
         f.setVisible(true);
     }
-
 }
