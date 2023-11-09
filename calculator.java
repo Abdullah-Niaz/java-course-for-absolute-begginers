@@ -8,10 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 class MyFrame extends Frame {
-    Label l1, l2;
-    TextField tf1, tf2;
-    Label l3;
-    TextField tf3;
+    Label l1, l2,l3;
+    TextField tf1, tf2,tf3;
 
     public MyFrame() {
         super("My Calculator");
@@ -85,7 +83,8 @@ class MyFrame extends Frame {
                 }
 
                 tf3.setText(String.valueOf(result));
-            } catch (NumberFormatException ex) {
+            } 
+            catch (NumberFormatException ex) {
                 tf3.setText("Error: Invalid input");
             }
         }
@@ -95,7 +94,8 @@ class MyFrame extends Frame {
 public class calculator {
     public static void main(String[] args) {
         MyFrame f = new MyFrame();
-        f.setSize(330, 300);
+        f.setBounds(400,200,330,300);
+        // f.setSize(330, 300);
         f.setVisible(true);
     }
 }
