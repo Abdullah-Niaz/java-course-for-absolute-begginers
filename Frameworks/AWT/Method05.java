@@ -48,6 +48,9 @@ class MyRadio extends Frame implements ItemListener {
         if(c3.getState()){
             str = str + " " + c3.getLabel();
         }
+        if(c4.getState()){
+            str = str + " " + c4.getLabel();
+        }
         if(str.isEmpty()){
             str = "Nothing is slected !";
         }
